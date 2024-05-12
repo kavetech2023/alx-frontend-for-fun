@@ -6,8 +6,9 @@
 
 import sys
 import os.path
-import re
 import hashlib
+import re
+
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
