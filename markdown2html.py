@@ -23,14 +23,14 @@ if __name__ == '__main__':
     with open(sys.argv[1]) as read:
         with open(sys.argv[2], 'w') as html:
             unordered_start, ordered_start, paragraph = False, False, False
-            # bold syntax
+            # create a bold syntax
             for line in read:
                 line = line.replace('**', '<b>', 1)
                 line = line.replace('**', '</b>', 1)
                 line = line.replace('__', '<em>', 1)
                 line = line.replace('__', '</em>', 1)
 
-                # md5
+                # md5 hash
                 md5 = re.findall(r'\[\[.+?\]\]', line)
                 md5_inside = re.findall(r'\[\[(.+?)\]\]', line)
                 if md5:
